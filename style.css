@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root{
     --gold:#d4af37;
@@ -53,10 +53,11 @@ body{
 
 
 .hero h1{
-    font-family:'Playfair Display', serif  !important;
-    font-size:5rem;
-    font-weight:700;
-    letter-spacing:2px;
+
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 6rem !important;
+    font-weight: 400 !important;
+
 
     text-shadow:
     0 0 10px rgba(212,175,55,.9),
