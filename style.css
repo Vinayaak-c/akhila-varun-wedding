@@ -83,7 +83,15 @@ body{
 
 
 /*wedding card*/
-
+.invitation,
+.invitation-preview{
+    width:100%;
+    max-width:700px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:20px;
+}
 
 
 /* BUTTON */
