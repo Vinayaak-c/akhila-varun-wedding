@@ -116,6 +116,41 @@ body{
     color:white;
 }
 
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons .btn{
+    min-width:220px;
+    padding:14px 24px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* Invitation Button */
+
+.invitation-btn{
+    border:2px solid white;
+    color:white;
+    background:transparent;
+    transition:.3s;
+}
+
+.invitation-btn:hover{
+    background:white;
+    color:var(--rose-gold);
+}
+
 /* SECTION TITLES */
 
 section h2{
