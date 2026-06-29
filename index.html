@@ -305,16 +305,17 @@
 
     <script>
 
-
 const music = document.getElementById("bgMusic");
 
-document.querySelectorAll(".play-music").forEach(button => {
-    button.addEventListener("click", () => {
-        if (music.paused) {
-            music.play().catch(err => console.log(err));
-        }
-    });
-});
+function playMusic() {
+    if (music.paused) {
+        music.play().catch(err => console.log(err));
+    }
+}
+
+document.getElementById("viewDetailsBtn").addEventListener("click", playMusic);
+
+document.querySelector(".invitation-btn").addEventListener("click", playMusic);
 
 
         const weddingDate = new Date("July 20, 2026 11:30:00");
