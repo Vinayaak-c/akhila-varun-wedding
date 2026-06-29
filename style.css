@@ -151,6 +151,174 @@ body{
     color:var(--rose-gold);
 }
 
+/*popup*/
+
+/* ===========================
+      LUXURY POPUP
+=========================== */
+
+.modal{
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
+}
+
+.modal-dialog{
+    max-width:900px;
+}
+
+.wedding-modal{
+
+    border:none;
+    border-radius:30px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fffdfb,
+        #fff5f7
+    );
+
+    animation:popup .45s ease;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.35);
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+.modal-header{
+
+    background:
+    linear-gradient(
+        90deg,
+        #b76e79,
+        #d4af37
+    );
+
+    color:white;
+    border:none;
+    padding:22px;
+
+}
+
+.modal-title{
+
+    width:100%;
+    text-align:center;
+
+    font-family:'Marcellus',serif;
+
+    font-size:2rem;
+
+}
+
+.btn-close{
+
+    filter:invert(1);
+
+}
+
+.modal-body{
+
+    padding:35px;
+    background:#fffdfb;
+
+}
+
+.modal-card{
+
+    width:100%;
+    max-width:700px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.2);
+
+}
+
+.modal-card:hover{
+
+    transform:scale(1.03);
+
+}
+
+.modal-footer{
+
+    border:none;
+    background:#fffdfb;
+    padding:25px;
+
+}
+
+.modal-footer .btn{
+
+    min-width:180px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.modal-dialog{
+
+    margin:10px;
+
+}
+
+.modal-title{
+
+    font-size:1.3rem;
+
+}
+
+.modal-body{
+
+    padding:15px;
+
+}
+
+.modal-card{
+
+    max-width:100%;
+    border-radius:15px;
+
+}
+
+.modal-footer{
+
+    flex-direction:column;
+
+}
+
+.modal-footer .btn{
+
+    width:100%;
+
+}
+
+}
 /* SECTION TITLES */
 
 section h2{
@@ -392,4 +560,288 @@ footer{
     .countdown-box{
         padding:20px;
     }
+}
+
+
+
+
+/* =========================================
+        PREMIUM WEDDING POPUP
+========================================= */
+
+.modal{
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.modal-dialog{
+
+    max-width:900px;
+
+    animation:popup .55s ease;
+
+}
+
+@keyframes popup{
+
+    0%{
+
+        transform:scale(.6);
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.wedding-modal{
+
+    border:none;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #fffdfb,
+        #fff5f7
+    );
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.35);
+
+}
+
+.modal-header{
+
+    background:
+    linear-gradient(
+        90deg,
+        #b76e79,
+        #d4af37
+    );
+
+    color:white;
+
+    justify-content:center;
+
+    padding:22px;
+
+}
+
+.modal-title{
+
+    font-family:'Marcellus',serif;
+
+    font-size:2rem;
+
+}
+
+.modal-body{
+
+    padding:35px;
+
+}
+
+.modal-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:20px;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.modal-card:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 40px rgba(212,175,55,.5);
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#b76e79;
+
+    font-size:20px;
+
+    z-index:1000;
+
+    transition:.3s;
+
+}
+
+.close-btn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+.modal-footer{
+
+    justify-content:center;
+
+    padding:25px;
+
+}
+
+.modal-footer .btn{
+
+    min-width:220px;
+
+}
+
+.modal.show .modal-card{
+
+    animation:cardZoom .7s ease;
+
+}
+
+@keyframes cardZoom{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.modal-dialog{
+
+    margin:12px;
+
+}
+
+.modal-header{
+
+    padding:15px;
+
+}
+
+.modal-title{
+
+    font-size:1.3rem;
+
+}
+
+.modal-body{
+
+    padding:12px;
+
+}
+
+.modal-card{
+
+    border-radius:12px;
+
+}
+
+.modal-footer{
+
+    padding:15px;
+
+}
+
+.modal-footer .btn{
+
+    width:100%;
+
+}
+
+}
+
+
+
+.sparkle{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+background-image:
+radial-gradient(circle,#ffffff99 1px,transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.18;
+
+animation:moveStars 18s linear infinite;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+background-position:0 0;
+
+}
+
+to{
+
+background-position:400px 400px;
+
+}
+
 }
