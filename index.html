@@ -25,31 +25,29 @@
 
             <h1>Varun &amp; Akhila</h1>
 
-                    <p class="lead">
-                        Together with their families
-                    </p>
+            <p class="lead">
+                Together with their families
+            </p>
 
-                    <h3>20 July 2026</h3>
-                    <p class="hero-message">
-                        With great joy and love,
-                        we invite you to celebrate the beginning
-                        of our forever journey together.
-                    </p>
+            <h3>20 July 2026</h3>
+            <p class="hero-message">
+                With great joy and love,
+                we invite you to celebrate the beginning
+                of our forever journey together.
+            </p>
 
-                    <div class="hero-buttons mt-4">
+            <div class="hero-buttons mt-4">
 
-                        <a href="#details" id="viewDetailsBtn" class="btn btn-custom">
-                            💍 View Details
-                        </a>
+                <a href="#details" id="viewDetailsBtn" class="btn btn-custom play-music">
+                    💍 View Details
+                </a>
 
-                        <a href="#" class="btn btn-outline-light invitation-btn" data-bs-toggle="modal"
-                            data-bs-target="#weddingCardModal">
+                <a href="#" class="btn btn-outline-light invitation-btn play-music" data-bs-toggle="modal"
+                    data-bs-target="#weddingCardModal">
+                    📜 Traditional Invitation
+                </a>
 
-                            📜 Traditional Invitation
-
-                        </a>
-
-                    </div>
+            </div>
 
         </div>
 
@@ -233,51 +231,47 @@
     </section>
 
     <!--popup-->
-<!-- Premium Wedding Invitation Modal -->
+    <!-- Premium Wedding Invitation Modal -->
 
-<div class="modal fade" id="weddingCardModal" tabindex="-1">
+    <div class="modal fade" id="weddingCardModal" tabindex="-1">
 
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
 
-        <div class="modal-content wedding-modal">
+            <div class="modal-content wedding-modal">
 
-            <button class="close-btn"
-                    data-bs-dismiss="modal">
-                ✕
-            </button>
+                <button class="close-btn" data-bs-dismiss="modal">
+                    ✕
+                </button>
 
-            <div class="modal-header border-0">
+                <div class="modal-header border-0">
 
-                <h2 class="modal-title">
-                    💍 Our Wedding Invitation 💍
-                </h2>
+                    <h2 class="modal-title">
+                        💍 Our Wedding Invitation 💍
+                    </h2>
 
-            </div>
+                </div>
 
-            <div class="modal-body text-center">
+                <div class="modal-body text-center">
 
-                <img src="wedding-card.jpeg"
-                     class="modal-card img-fluid">
+                    <img src="wedding-card.jpeg" class="modal-card img-fluid">
 
-            </div>
+                </div>
 
-            <div class="modal-footer border-0">
+                <div class="modal-footer border-0">
 
-                <a href="wedding-card.jpeg"
-                   download
-                   class="btn btn-custom">
+                    <a href="wedding-card.jpeg" download class="btn btn-custom">
 
-                    📥 Download Invitation
+                        📥 Download Invitation
 
-                </a>
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
-
-</div>
 
 
     <!--audio-->
@@ -312,16 +306,15 @@
     <script>
 
 
+const music = document.getElementById("bgMusic");
 
-        const music = document.getElementById("bgMusic");
-        const viewBtn = document.getElementById("viewDetailsBtn");
-
-        viewBtn.addEventListener("click", function () {
-            music.play().catch(error => {
-                console.log("Music could not play:", error);
-            });
-        });
-
+document.querySelectorAll(".play-music").forEach(button => {
+    button.addEventListener("click", () => {
+        if (music.paused) {
+            music.play().catch(err => console.log(err));
+        }
+    });
+});
 
 
         const weddingDate = new Date("July 20, 2026 11:30:00");
